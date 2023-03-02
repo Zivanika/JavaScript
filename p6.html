@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let playAgain=true
+        while(playAgain){
+        let a=parseInt(prompt("Enter your age: "))
+        if(a>18){
+            alert("You can drive!")
+        }
+        if(0<a<18)
+        {
+            alert("You cannot drive!")
+        }
+        if(age<0)
+        {
+            console.error("You have entered the wrong age!!")
+            break
+        }
+        playAgain=confirm("Do you want to play again?")
+    }
+    </script>
+</body>
+</html>

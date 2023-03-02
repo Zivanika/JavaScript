@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cpu;
+        let a=prompt('Enter S for snake,W for water & G for gun: ')
+        let cpuI=Math.floor(Math.random())*3
+        if(cpuI==0)
+        {
+            cpu='S'
+        }
+        if(cpuI==1)
+        {
+            cpu='W'
+        }
+        if(cpuI==2)
+        {
+            cpu='G'
+        }
+        const match=(cpu,a)=>{
+            if(cpu==a)
+            return "Nobody"
+            else if(cpu==='S' && a==='W')
+            {
+                return "Cpu wins"
+            }
+            else if(cpu=='S' && a=='G')
+            {
+                return "You win"
+            }
+            else if(cpu==='W' && a==='S')
+            {
+                return "You win"
+            }
+            else if(cpu==='W' && a==='G'){
+                return "Cpu wins"
+            }
+            else if(cpu==='G' && a==='S')
+            {
+                return "Cpu wins"
+            }
+            else if(cpu==='G' && a==='W')
+            {
+                return "You win"
+            }
+        }
+        let result=match(cpu,a)
+        document.write(`Cpu: ${cpu}<br>User:${a}<br> The winner is: ${result}`)
+    </script>
+</body>
+</html>
